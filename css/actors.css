@@ -10,6 +10,7 @@
     height: var(--size-unit-basic);
     background-image: url("/graphics/player/player.png");
     animation: move-8-x var(--animation-time) steps(8) infinite; 
+    position: fixed;
 }
 
 .enemy__basic {
@@ -32,14 +33,14 @@
     width: var(--size-unit-basic);
     height: var(--size-unit-basic);
     background-image: url("/graphics/effect/explosion_small.png");
-    animation: move-17-x var(--animation-time) steps(17) infinite; 
+    animation: move-17-x var(--animation-time) steps(17) forwards; 
 }
 
 .explosion__big {
     width: var(--size-unit-big);
     height: var(--size-unit-big);
     background-image: url("/graphics/effect/explosion_big.png");
-    animation: move-34-x var(--animation-time-long) steps(17) infinite; 
+    animation: move-34-x var(--animation-time-long) steps(17) forwards; 
 }
 
 .bullet {
