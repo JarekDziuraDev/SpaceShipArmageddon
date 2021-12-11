@@ -1,0 +1,90 @@
+:root {
+    --size-unit-basic: 64px;
+    --size-unit-big: 128px;
+    --animation-time: 500ms;
+    --animation-time-long: 700ms;
+}
+
+.spaceship {
+    width: var(--size-unit-basic);
+    height: var(--size-unit-basic);
+    background-image: url("/graphics/player/player.png");
+    animation: move-8-x var(--animation-time) steps(8) infinite; 
+}
+
+.enemy__basic {
+    width: var(--size-unit-basic);
+    height: var(--size-unit-basic);
+    transform: rotate(180deg);
+    background-image: url("/graphics/enemy/enemy_basic.png");
+    animation: move-8-x var(--animation-time) steps(8) infinite; 
+}
+
+.enemy__big {
+    width: var(--size-unit-big);
+    height: var(--size-unit-big);
+    transform: rotate(180deg);
+    background-image: url("/graphics/enemy/enemy_big.png");
+    animation: move-16-x var(--animation-time) steps(8) infinite; 
+}
+
+.explosion__small {
+    width: var(--size-unit-basic);
+    height: var(--size-unit-basic);
+    background-image: url("/graphics/effect/explosion_small.png");
+    animation: move-17-x var(--animation-time) steps(17) infinite; 
+}
+
+.explosion__big {
+    width: var(--size-unit-big);
+    height: var(--size-unit-big);
+    background-image: url("/graphics/effect/explosion_big.png");
+    animation: move-34-x var(--animation-time-long) steps(17) infinite; 
+}
+
+.bullet {
+    background-image: url("../graphics/bullet/bullet.png");
+    background-size: cover;
+    width: 32px;
+    height: 32px;
+}
+
+@keyframes move-8-x {
+    from {
+        background-position-x: 0px;
+    }
+
+    to {
+        background-position-x: calc(var(--size-unit-basic) * -8);
+    }
+}
+
+@keyframes move-16-x {
+    from {
+        background-position-x: 0px;
+    }
+
+    to {
+        background-position-x: calc(var(--size-unit-basic) * -16);
+    }
+}
+
+@keyframes move-17-x {
+    from {
+        background-position-x: 0px;
+    }
+
+    to {
+        background-position-x: calc(var(--size-unit-basic) * -17);
+    }
+}
+
+@keyframes move-34-x {
+    from {
+        background-position-x: 0px;
+    }
+
+    to {
+        background-position-x: calc(var(--size-unit-basic) * -34);
+    }
+}
